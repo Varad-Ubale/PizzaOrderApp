@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Background Image -->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/pizza_bg"
+        android:scaleType="centerCrop"
+        android:contentDescription="Background" />
+
+    <!-- Foreground Content -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp"
+            android:background="#AAFFFFFF"> <!-- white with transparency -->
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Pizza Order Customizer"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:layout_marginBottom="20dp" />
+
+            <EditText
+                android:id="@+id/nameInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter your name"
+                android:inputType="textPersonName"
+                android:layout_marginBottom="15dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Choose Size:"
+                android:textStyle="bold" />
+
+            <RadioGroup
+                android:id="@+id/sizeGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="15dp">
+
+                <RadioButton android:id="@+id/radioSmall" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:text="Small" />
+                <RadioButton android:id="@+id/radioMedium" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:text="Medium" />
+                <RadioButton android:id="@+id/radioLarge" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:text="Large" />
+            </RadioGroup>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Choose Toppings:"
+                android:textStyle="bold" />
+
+            <CheckBox android:id="@+id/checkCheese" android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:text="Extra Cheese" />
+            <CheckBox android:id="@+id/checkOlives" android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:text="Olives" />
+            <CheckBox android:id="@+id/checkPeppers" android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:text="Bell Peppers" />
+            <CheckBox android:id="@+id/checkMushrooms" android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:text="Mushrooms" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Quantity:"
+                android:textStyle="bold"
+                android:layout_marginTop="15dp" />
+
+            <EditText
+                android:id="@+id/quantityInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter quantity"
+                android:inputType="number"
+                android:layout_marginBottom="20dp" />
+
+            <Button
+                android:id="@+id/placeOrderBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Place Order"
+                android:backgroundTint="#F44336"
+                android:textColor="#FFFFFF"
+                android:padding="12dp"
+                android:layout_marginTop="10dp" />
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>
